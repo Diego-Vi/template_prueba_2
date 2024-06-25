@@ -46,8 +46,8 @@ st.write(
     "select some values in the `Issue Category` and check `Mark as annotated?` once finished 👇"
 )
 
-df["Issue"] = [True, True, True, False]
-df["Category"] = ["Accuracy", "Accuracy", "Completeness", ""]
+#df["Issue"] = [True, True, True, False]
+#df["Category"] = ["Accuracy", "Accuracy", "Completeness", ""]
 
 new_df = st.data_editor(
     df,
