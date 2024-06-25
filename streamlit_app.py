@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from pulp import *
 
 # Set the title and favicon that appear in the Browser's tab bar.
 st.set_page_config(
@@ -8,37 +9,34 @@ st.set_page_config(
 )
 
 
-st.title("VISUALIZADOR KARDEX ACTIVITY")
+st.title("DESPACHADOR")
 
 st.write(
-    "Prueba codigo Activity Distribuciones"
+    "Despachar"
 )
 
-server = '192.168.10.13' 
-database = 'fpsp' 
-username = 'operaciones' 
-password = 'S4nm4r1424'
+####
+stock_minimo_codigo = 0
+peso_venta = 3
+peso_stock_alto = 1.5
 
-from sqlalchemy.engine import URL
-connection_string = 'DRIVER={SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password
-connection_url = URL.create("mssql+pyodbc", query={"odbc_connect": connection_string})
+Ruta = "Base_Estandar_Cupo.xlsx"
+Pestaña_Excel_1 = "cupo"
+Pestaña_Excel_2 = "cod"
+Pestaña_Excel_3 = "venta_cod"
+Pestaña_Excel_4 = "venta_agr"
+Pestaña_Excel_5 = "inv_cod"
 
-from sqlalchemy import create_engine
-engine = create_engine(connection_url)
-con = engine.connect()
+#Importar Excel
+df_cupo = pd.read_excel(Ruta,sheet_name=Pestaña_Excel_1,header=0)
+df_cod = pd.read_excel(Ruta,sheet_name=Pestaña_Excel_2,header=0)
+df_venta_cod = pd.read_excel(Ruta,sheet_name=Pestaña_Excel_3,header=0)
+df_venta_agr = pd.read_excel(Ruta,sheet_name=Pestaña_Excel_4,header=0)
+df_inv_cod = pd.read_excel(Ruta,sheet_name=Pestaña_Excel_5,header=0)
 
-#rs = con.execute('SELECT * FROM kardex')
-#df = pd.DataFrame(rs.fetchall())
 
-sql='SELECT codemp,fecdoc,tiporg,numdoc,codalm,tipdoc,codart,cantot FROM kardex;'
-#sql='SELECT kardex.fecdoc,kardex.tiporg,kardex.numdoc,kardex.codalm,almacenes.nomalm,kardex.tipdoc,kardex.codart,kardex.cantot FROM kardex INNER JOIN almacenes ON kardex.codalm=almacenes.codalm;'
-df_kardex = pd.read_sql(sql,con)
-sql='SELECT codemp,codalm,nomalm FROM almacenes;'
-df_almacenes = pd.read_sql(sql,con)
-
-con.close()
-
-st.write(df_almacenes)
+####
+st.write(df_cupo)
 
 
 st.write(
