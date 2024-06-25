@@ -36,7 +36,7 @@ Pestaña_Excel_5 = 'inv_cod'
 
 
 ####
-st.write(df_cupo)
+#st.write(df_cupo)
 
 
 st.write(
