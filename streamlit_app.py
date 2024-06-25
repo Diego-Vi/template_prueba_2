@@ -9,10 +9,10 @@ st.set_page_config(
 )
 
 
-st.title("DESPACHADOR")
+st.title("DESPACHADOR ACTIVITY DISTRIBUCION V_0.0")
 
 st.write(
-    "Despachar"
+    "Usado para el despacho de tiendas"
 )
 
 ####
