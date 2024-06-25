@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-from pulp import *
+#from pulp import *
 
 # Set the title and favicon that appear in the Browser's tab bar.
 st.set_page_config(
