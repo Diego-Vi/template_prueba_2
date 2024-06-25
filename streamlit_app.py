@@ -20,12 +20,12 @@ stock_minimo_codigo = 0
 peso_venta = 3
 peso_stock_alto = 1.5
 
-Ruta = "Base_Estandar_Cupo.xlsx"
-Pestaña_Excel_1 = "cupo"
-Pestaña_Excel_2 = "cod"
-Pestaña_Excel_3 = "venta_cod"
-Pestaña_Excel_4 = "venta_agr"
-Pestaña_Excel_5 = "inv_cod"
+Ruta = 'Base_Estandar_Cupo.xlsx'
+Pestaña_Excel_1 = 'cupo'
+Pestaña_Excel_2 = 'cod'
+Pestaña_Excel_3 = 'venta_cod'
+Pestaña_Excel_4 = 'venta_agr'
+Pestaña_Excel_5 = 'inv_cod'
 
 #Importar Excel
 df_cupo = pd.read_excel(Ruta,sheet_name=Pestaña_Excel_1,header=0)
