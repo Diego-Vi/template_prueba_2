@@ -28,8 +28,7 @@ Pestaña_Excel_4 = 'venta_agr'
 Pestaña_Excel_5 = 'inv_cod'
 
 #Importar Excel
-df = pd.read_excel(Ruta,sheet_name=Pestaña_Excel_1)
-#df_cupo = pd.read_excel(Ruta,sheet_name=Pestaña_Excel_1,header=0)
+df_cupo = pd.read_excel(Ruta,sheet_name=Pestaña_Excel_1,header=0)
 #df_cod = pd.read_excel(Ruta,sheet_name=Pestaña_Excel_2,header=0)
 #df_venta_cod = pd.read_excel(Ruta,sheet_name=Pestaña_Excel_3,header=0)
 #df_venta_agr = pd.read_excel(Ruta,sheet_name=Pestaña_Excel_4,header=0)
