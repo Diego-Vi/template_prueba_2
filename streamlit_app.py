@@ -1,6 +1,12 @@
 import streamlit as st
 import pandas as pd
 
+# Set the title and favicon that appear in the Browser's tab bar.
+st.set_page_config(
+    page_title='Activity Distribuciones',
+    page_icon=':shopping_bags:', # This is an emoji shortcode. Could be a URL too.
+)
+
 
 st.title("📊 Data evaluation app")
 
