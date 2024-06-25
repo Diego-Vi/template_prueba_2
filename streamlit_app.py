@@ -20,7 +20,7 @@ stock_minimo_codigo = 0
 peso_venta = 3
 peso_stock_alto = 1.5
 
-Ruta = "https://github.com/Diego-Vi/template_prueba_2/blob/main/Base_Estandar_Cupo.xlsx"
+Ruta = "Base_Estandar_Cupo.xlsx"
 Pestaña_Excel_1 = "cupo"
 Pestaña_Excel_2 = "cod"
 Pestaña_Excel_3 = "venta_cod"
